@@ -1,5 +1,7 @@
-import { animate } from "./utils/animate-frames.js";
+import { animate, setPlayerState } from "./utils/animate-frames.js";
 import { animationStates } from "./constant/sprite-animation-states.js";
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById("canvas1");
@@ -16,6 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const spriteHeight = 530; // Height of one frame in the sprite sheet
     // let frameX = 0; // Initial frame index for X (horizontal)
     // let frameY = 0; // Initial frame index for Y (vertical)
+
+    const dropdown = document.getElementById('animations');
+    dropdown.addEventListener('change', function(e) { 
+      setPlayerState(e.target.value);  // Update playerState using exported function
+    });
 
     const spriteAnimations = []
 
