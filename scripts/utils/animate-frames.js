@@ -1,7 +1,11 @@
 let gameFrame = 0; // Move gameFrame outside of the animate function
 const staggerFrame = 10; // Stagger frame constant
+let playerState = 'idle'; // Keep playerState private within the module
 
-let playerState = 'idle'
+// Function to update playerState
+export function setPlayerState(newState) {
+  playerState = newState;
+}
 
 export function animate(ctx, CANVAS_WIDTH, CANVAS_HEIGHT, playerImage, spriteDimConfig, spriteAnimations) {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT); // Clear rectangle

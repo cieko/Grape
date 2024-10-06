@@ -1,3 +1,11 @@
-.test-text {
-  color: var(--primary-color);
+.controls {
+  position: absolute;
+  z-index: 10;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controls, select, option {
+  font-size: 25px;
 }
